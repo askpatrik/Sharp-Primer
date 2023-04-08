@@ -6,7 +6,50 @@
         xmlns:local="clr-namespace:Sharp_Primer"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+        
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Margin="20">
+        <TextBox x:Name="UsernameTextBox" 
+                 Text="Username" 
+                 BorderBrush="#333" 
+                 BorderThickness="1" 
+                 Margin="0 0 0 10" 
+                 Padding="5"
+                 Width="200" />
+        <PasswordBox x:Name="PasswordBox" 
+                     Password="Password" 
+                     BorderBrush="#333" 
+                     BorderThickness="1" 
+                     Margin="0 0 0 10" 
+                     Padding="5"
+                     Width="200" />
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Forgot password?" Margin="0 0 10 0" />
+            <Button Content="Reset" Background="#333" Foreground="White" Padding="10" />
+        </StackPanel>
+    </StackPanel>
+    <Button x:Name="LoginButton" 
+            Content="Log In" 
+            Background="#333" 
+            Foreground="White" 
+            Margin="20" 
+            Padding="10" 
+            Grid.Row="1" />
+
+            <StackPanel>
+  
+
+ <Button x:Name="CreateAccountButton" Content="Create Account" HorizontalAlignment="Right" Margin="0,10,10,0" 
+           VerticalAlignment="Top" Width="150" Height="50" FontSize="20" Background="#2196F3" Foreground="White" 
+           BorderBrush="#2196F3" BorderThickness="2" Click="CreateAccountButton_Click"/>
+
+</StackPanel>
+
+
+</Grid>
 </Window>
