@@ -21,13 +21,14 @@
                  Margin="0 0 0 10" 
                  Padding="5"
                  Width="200" />
-        <PasswordBox x:Name="PasswordBox" 
+        <PasswordBox x:Name="PasswordTextBox" 
                      Password="Password" 
                      BorderBrush="#333" 
                      BorderThickness="1" 
                      Margin="0 0 0 10" 
                      Padding="5"
                      Width="200" />
+                    
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Forgot password?" Margin="0 0 10 0" />
             <Button Content="Reset" Background="#333" Foreground="White" Padding="10" />
@@ -39,7 +40,8 @@
             Foreground="White" 
             Margin="20" 
             Padding="10" 
-            Grid.Row="1" />
+            Grid.Row="1" 
+            Click="LoginButton_Click" />
 
             <StackPanel>
   

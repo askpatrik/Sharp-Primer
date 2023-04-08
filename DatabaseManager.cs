@@ -26,20 +26,47 @@ namespace Sharp_Primer
         }
         public void InsertUser(string username, string password)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
-                conn.Open();
+                connection.Open();
 
                 string sql = "INSERT INTO Users (Username, Password) VALUES (@username, @password)";
 
-                using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
                     cmd.ExecuteNonQuery();
                 }
+                connection.Close();
             }
+        }
+        public bool UserExists(string username)
+        {
+            string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";        
+            using (var command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+                connection.Open();
+                int count = (int)(long)command.ExecuteScalar();
+                connection.Close();
+                return count > 0;
+                
+            }
+
+        }
+          public bool VerifyPassword(string username, string password)
+        {
+            string query = "SELECT Password FROM Users WHERE Username = @Username";        
+            using (var command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+                connection.Open();
+                string hashedPassword = (string)command.ExecuteScalar();
+                connection.Close();
+                return string.Equals(password, hashedPassword);
+            }
+
         }
     }
 }
