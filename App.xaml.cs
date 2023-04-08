@@ -13,5 +13,6 @@ namespace Sharp_Primer
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

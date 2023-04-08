@@ -35,5 +35,6 @@ namespace Sharp_Primer
             // Close the CreateAccountWindow
             this.Close();
         }
+        
     }
 }

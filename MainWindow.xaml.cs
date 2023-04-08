@@ -12,20 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Data.Sqlite;
 
 namespace Sharp_Primer
 {
     public partial class MainWindow : Window
     {
+
+        private DatabaseManager dbManager;
         public MainWindow()
         {
             InitializeComponent();
-        }
+            // Create database
+
+           dbManager = new DatabaseManager();     
+            }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
         }
+
     }
 }
