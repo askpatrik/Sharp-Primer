@@ -6,6 +6,16 @@
     <RootNamespace>Sharp_Primer</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-  </PropertyGroup>
 
+  </PropertyGroup>
+  
+<ItemGroup>
+  <Watch Include="**/*.xaml" />
+  <Watch Include="**/*.xaml.cs" />
+ 
+</ItemGroup>
+  
+<ItemGroup>
+  <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.4" />
+</ItemGroup>
 </Project>
