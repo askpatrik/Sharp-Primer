@@ -29,7 +29,7 @@ namespace Sharp_Primer
             }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(dbManager);
             loginWindow.Show();
             this.Close();
         }
