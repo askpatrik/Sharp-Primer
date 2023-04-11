@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Data.Sqlite;
+using Sharp_Primer.Challenges;
 
 namespace Sharp_Primer
 {
@@ -25,12 +26,18 @@ namespace Sharp_Primer
             InitializeComponent();
             // Create database
 
-           dbManager = new DatabaseManager();     
-            }
+            dbManager = new DatabaseManager();
+        }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow(dbManager);
             loginWindow.Show();
+            this.Close();
+        }
+        private void ChallengesButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChallengesWindow challengesWindow = new ChallengesWindow();
+            challengesWindow.Show();
             this.Close();
         }
 

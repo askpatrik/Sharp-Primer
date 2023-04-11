@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <RootNamespace>Sharp_Primer</RootNamespace>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
 
   </PropertyGroup>
@@ -16,6 +16,7 @@
 </ItemGroup>
   
 <ItemGroup>
+  <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
   <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.4" />
   <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
 </ItemGroup>
