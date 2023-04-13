@@ -27,8 +27,11 @@ namespace Sharp_Primer
                 if (dbManager.VerifyPassword(username, password))
                 {
                     MessageBox.Show("Login successful!");
-                    UserHomeWindow userHomeWindow = new UserHomeWindow(username);
-                    userHomeWindow.Show();
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.loggedInUsername = username;
+
+                    mainWindow.Show();
+                    mainWindow.MainWindow_Load();
                     Close();
                 }
                 else

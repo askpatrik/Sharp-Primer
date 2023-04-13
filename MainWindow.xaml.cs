@@ -1,31 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Data.Sqlite;
-using Sharp_Primer.Challenges;
+﻿using System.Windows;
 
 namespace Sharp_Primer
 {
     public partial class MainWindow : Window
     {
+        public string loggedInUsername;
 
         private DatabaseManager dbManager;
         public MainWindow()
         {
             InitializeComponent();
             // Create database
-
             dbManager = new DatabaseManager();
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -36,10 +21,23 @@ namespace Sharp_Primer
         }
         private void ChallengesButton_Click(object sender, RoutedEventArgs e)
         {
-           ChallengesWindow challengesWindow = new ChallengesWindow();
+            ChallengesWindow challengesWindow = new ChallengesWindow();
             challengesWindow.Show();
             this.Close();
         }
+        public void MainWindow_Load()
+        {
+            // Check if the user is logged in
+            if (loggedInUsername is not null)
+            {
+                // Display the logged-in user's username
+                LoggedInLabel.Content = $"Logged in as {loggedInUsername}";
+            }
+            else
+            {
+                // Display a default message
+                LoggedInLabel.Content = "Not logged in";
+            }
 
-    }
-}
+        }
+    }}

@@ -15,7 +15,7 @@ namespace Sharp_Primer
         {
             // Collect the user's input data
             string username = UsernameTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string password = PasswordTextBox.Password;
 
             // check if username and password are valid, then insert into database
             if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))

@@ -15,7 +15,6 @@
         </Grid.RowDefinitions>
       
         <StackPanel Grid.Row="0" Margin="20">
-            <TextBlock Text = "Log in"/>
 
             <TextBox x:Name="UsernameTextBox"
            

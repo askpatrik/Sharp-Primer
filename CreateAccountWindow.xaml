@@ -7,7 +7,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sharp_Primer"
         mc:Ignorable="d"
-        Title="CreateAccountWindow" Height="450" Width="800">
+        Title="CreateAccountWindow" Height="450" Width="800"
+        Background="{StaticResource AppBackgroundBrush}">
 
 
     <Grid>
@@ -16,18 +17,42 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+       
+        <StackPanel Grid.Row="0" Margin="20">
 
+            <TextBox x:Name="UsernameTextBox"
+           
+             Background="#004d00" 
+             BorderBrush="#666666" 
+             BorderThickness="2" 
+             Foreground="White" 
+             FontFamily="Arial" 
+             FontSize="16" 
+             Margin="0 0 0 10"
+             Padding="5"
+             Height="30" 
+             Width="200"
+             Text="Username"/>
+  
+            <PasswordBox x:Name="PasswordTextBox"
+            Background="#004d00" 
+            BorderBrush="#666666" 
+            BorderThickness="2" 
+            Foreground="White" 
+            FontFamily="Arial" 
+            FontSize="16" 
+            Margin="0 0 0 10"
+            Padding="5"
+            Height="30" 
+            Width="200"
+            Password="Username"/>
+ 
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Username:" />
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="UsernameTextBox" />
-
-        <Label Grid.Row="1" Grid.Column="0" Content="Password:" />
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="PasswordTextBox" />
-
-        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Create Account" Click="CreateAccountButton_Click" />
+            <Button x:Name="CreateAccountButton"
+            Content="Create Account" HorizontalAlignment="Center" Margin="10,10,10,0"
+            VerticalAlignment="Top" Width="150" Height="50" FontSize="20" Background="#004d00"
+            Foreground="White"
+            BorderBrush="#004d00" BorderThickness="2" Click="CreateAccountButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

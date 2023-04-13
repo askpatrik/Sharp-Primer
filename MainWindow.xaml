@@ -28,6 +28,9 @@
             <TextBlock Text="Gamification Code Challenge App" FontSize="20" />
             <TextBlock Text="Log in under Account" FontSize="20" HorizontalAlignment = "Center" />
            
+            <Label x:Name="LoggedInLabel" Content="Not logged in" HorizontalAlignment="Center" Margin="0,10,10,0" Foreground = "Yellow"
+        FontSize="20"/>
+
         </StackPanel>
     </Grid>
 </Window>
