@@ -8,7 +8,7 @@
         Title="ChallengesWindow" Height="450" Width="800">
     <Grid>
     <TextBlock Text="Here we will have alot of challenges. For now we can only get to the Code Editor."/>
-    <Button Content="Code Editor"
+    <Button Content="New challenge"
         Margin="10"
         Click="CodeEdit_Click"/>
     </Grid>
