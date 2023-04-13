@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using ICSharpCode.AvalonEdit.Highlighting;
+using Sharp_Primer.Challenges;
 
 namespace Sharp_Primer
 {
@@ -17,6 +18,7 @@ namespace Sharp_Primer
     {
         private ICSharpCode.AvalonEdit.TextEditor _editor;
 
+       
         public CodeEditor()
         {
             _editor = new ICSharpCode.AvalonEdit.TextEditor();

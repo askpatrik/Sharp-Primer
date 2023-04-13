@@ -36,7 +36,7 @@ namespace Sharp_Primer
         }
         private void ChallengesButton_Click(object sender, RoutedEventArgs e)
         {
-            ChallengesWindow challengesWindow = new ChallengesWindow();
+           ChallengesWindow challengesWindow = new ChallengesWindow();
             challengesWindow.Show();
             this.Close();
         }

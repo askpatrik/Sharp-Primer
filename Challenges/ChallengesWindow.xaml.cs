@@ -1,4 +1,5 @@
 using System.Windows;
+using System.Windows.Controls;
 using Sharp_Primer.Challenges;
 
 namespace Sharp_Primer
@@ -16,8 +17,9 @@ namespace Sharp_Primer
         {
             CodeEdit codeEditWindow = new CodeEdit();
             codeEditWindow.Show();
-            this.Close();
+           
         }
+
 
     }
 }
