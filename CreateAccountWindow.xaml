@@ -48,7 +48,7 @@
             Password="Username"/>
  
 
-            <Button x:Name="CreateAccountButton"
+            <Button x:Name="CreateAccountButto"
             Content="Create Account" HorizontalAlignment="Center" Margin="10,10,10,0"
             VerticalAlignment="Top" Width="150" Height="50" FontSize="20" Background="#004d00"
             Foreground="White"
